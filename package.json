@@ -1,0 +1,37 @@
+{
+  "name": "xlsxtotxt",
+  "version": "1.0.0",
+  "description": "Programa para convertir archivos xlsx a txt",
+  "main": "back/main.js",
+  "scripts": {
+    "dev": "nodemon --exec \"electron back/main.js\"",
+    "package-win": "electron-packager . ConvertidorExcel --overwrite --asar --platform=win32 --arch=ia32 --icon=back/icons/favicon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Convertidor Excel a TXT\"",
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "Eduardo Favela",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "electron-packager": "^17.1.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-winstaller": "^5.2.1",
+    "exceljs": "^4.4.0",
+    "fs": "^0.0.1-security",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^27.2.1",
+    "nodemon": "^3.0.1"
+  }
+}
